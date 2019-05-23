@@ -22,6 +22,8 @@ export default class Client extends Component {
             name: '',
             id: --id,
         };
+        //This one is not neccessary here 
+        //As we see in savePerson method -> there is a state change action already
         // this.setState(state => ({
         //     persons: state.persons.add(person),
         // }));
@@ -61,6 +63,8 @@ export default class Client extends Component {
     }
 
     onSaveSuccess = person => {
+        //So. How it works. It is a kind of Observable pattern to check a queue of clicks
+        //If there is a more than one event -> halt until we get last
         let check = this.state.counters.filter(element => element.key === person.id);
         if (check && check.length > 0) {
             check.shift();
