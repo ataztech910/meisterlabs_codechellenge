@@ -1,18 +1,16 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
 import { addPerson } from '../actions';
 
-let AddPerson = ({ dispatch }) => {
+const AddPerson = ({dispatch}) => {
     return (
-        <button
-            className="challenge-create-person-button"
-            onClick={ e => {
-                e.preventDefault()
-                dispatch(addPerson())
-            }}
-        >Create Person</button>
+        <button className="challenge-create-person-button"
+            onClick={event=>{
+                event.preventDefault();
+                dispatch(addPerson());
+            }}>Create Person</button>
     );
 };
 
-AddPerson = connect()(AddPerson);
-export default AddPerson;
+export default connect()(AddPerson);
+// export default AddPerson;

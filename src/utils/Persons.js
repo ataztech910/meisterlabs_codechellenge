@@ -1,14 +1,14 @@
 export default class Persons {
     constructor(state = []) {
-        this.state = state;
+        this.persons = state;
     }
 
     get() {
-        return this.state;
+        return this.persons;
     }
 
     indexOf(person) {
-        return this.state.findIndex(entry => entry.id === person.id);
+        return this.persons.findIndex(entry => entry.id === person.id);
     }
 
     has(person) {

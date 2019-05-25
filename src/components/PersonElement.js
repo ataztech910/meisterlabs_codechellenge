@@ -1,25 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PersonElement = ({ onClick, person, onChange }) =>(
+const PersonElement = ({ onClick, id, name, onChange}) =>{
+    let input;
+    return(
     <div>
         <span className="challenge-person-id">
-            {person.id}
+            {id}
         </span>
         <input
-                value={person.name}
                 className="challenge-person-name"
-                onChange={onChange(person, this.value)} />
+                onChange={onChange}
+                />
         <button
                 className="challenge-person-save-name-button"
                 onClick={onClick} >Save Name</button>
     </div>
-);
+)};
 
 PersonElement.propTypes = {
-    onClick: PropTypes.func.isRequired,
-    onChange: PropTypes.func.isRequired,
-    person: PropTypes.object.isRequired
+    onClick: PropTypes.func,
+    person: PropTypes.object
 }
 
 export default PersonElement;
