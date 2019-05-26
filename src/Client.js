@@ -63,7 +63,7 @@ export default class Client extends Component {
     }
 
     onSaveSuccess = person => {
-        //So. How it works. It is a kind of Observable pattern to check a queue of clicks
+        //So. How it works. It is a kind of Streams to check a queue of clicks
         //If there is a more than one event -> halt until we get last
         let check = this.state.counters.filter(element => element.key === person.id);
         if (check && check.length > 0) {
