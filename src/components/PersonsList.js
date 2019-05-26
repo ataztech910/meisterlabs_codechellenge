@@ -18,7 +18,7 @@ PersonList.propTypes = {
     persons: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
-            name: PropTypes.string.isRequired
+            name: PropTypes.string
         }).isRequired
     ).isRequired,
     onPersonSave: PropTypes.func,

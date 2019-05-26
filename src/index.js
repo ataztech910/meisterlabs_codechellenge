@@ -5,18 +5,16 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { put, takeEvery } from 'redux-saga/effects';
 
 import './App.css';
 
 import personsReducer from './reducers';
-import watchPersons from './sagas';
-
+import rootSaga from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(personsReducer,
               applyMiddleware(sagaMiddleware));
-sagaMiddleware.run(watchPersons);              
+sagaMiddleware.run(rootSaga);              
 render(
     <Provider store={ store }>
         <App />

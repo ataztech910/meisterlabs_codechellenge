@@ -1,10 +1,6 @@
-let id = 0;
-export const addPerson = () => ({
+export const addPerson = (person) => ({
     type: 'ADD_PERSON',
-    person: {
-        name: '',
-        id: --id,
-    }
+    person: person
 });
 
 export const saveAddUser = (personData) => dispatch => ({

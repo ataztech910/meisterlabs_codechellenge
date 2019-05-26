@@ -1,5 +1,4 @@
 import Persons from '../utils/Persons';
-// import Server from '../Server';
 const newPersons = new Persons();
 const personsReducer = (state = [], action) => {
     switch (action.type) {
@@ -10,7 +9,6 @@ const personsReducer = (state = [], action) => {
             if(!state.persons){
                state.persons = newPersons.persons;
             }
-            action.person.id = state.persons.length + 1;
             const result = newPersons.upsert(action.person);
             return {
                 ...state,
