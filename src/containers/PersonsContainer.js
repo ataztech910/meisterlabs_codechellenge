@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
 import PersonsList from '../components/PersonsList';
 import { savePerson, savePersonDataRuntime } from '../actions';
-import Server from '../Server';
 
 const getPersons = (persons, request)=>{
     switch (request) {
@@ -19,10 +18,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     savePerson: person => {
-        Server['post'](person).then((result) => {
-            console.log('result ', result);
-            dispatch(savePerson(result));
-        })
+        dispatch(savePerson(person));
     },
     savePersonDataRuntime: (id, event) => dispatch( savePersonDataRuntime(id, event) )
 });

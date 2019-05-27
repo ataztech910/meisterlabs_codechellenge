@@ -7,6 +7,11 @@ export const saveAddUser = (personData) => dispatch => ({
     type: 'SAVE_ADD_USER',
     person: personData
 })
+export const saveUpdateUser = (personData) => dispatch => ({
+    type: 'SAVE_UPDATE_USER',
+    person: personData
+})
+
 
 export const savePerson = personData => ({
     type: 'SAVE_PERSON',

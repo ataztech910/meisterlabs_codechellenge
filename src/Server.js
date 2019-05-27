@@ -22,6 +22,8 @@ class Server {
                 id: state.id++,
             }))
             .then(person => {
+                console.log('state is ', state);
+                console.log('person is ', person);
                 state.persons = state.persons.add(person);
                 return person;
             });
