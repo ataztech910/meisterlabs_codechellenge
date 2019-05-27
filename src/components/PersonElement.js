@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const PersonElement = ({ onClick, id, name, onChange}) =>{
     let input;
     return(
-    <div>
+    <div className="challenge-person-element">
         <span className="challenge-person-id">
             {id}
         </span>

@@ -4,12 +4,12 @@ import { addPerson } from '../actions';
 
 const AddPerson = ({dispatch}) => {
     return (
-        <button className="challenge-create-person-button"
+        <div className="challenge-create-person-button"
             onClick={event=>{
                 event.preventDefault();
                 dispatch(addPerson({name: '',id: -1}));
             }
-        }>Create Person</button>
+        }>Create Person<div></div></div>
     );
 };
 

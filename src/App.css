@@ -1,6 +1,53 @@
+body{
+  background-color: #220C10;
+  padding: 20%;
+  font-family: Helvetica Neue;
+}
+h1{
+  color: #75B8C8;
+  font-family: Helvetica Neue;
+}
 .challenge {}
 
-.challenge-create-person-button {}
+.challenge-create-person-button, .challenge-person-save-name-button {
+    backface-visibility: hidden;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    background: #75B8C8;
+    border-radius: 0px;
+    border: 0px solid #506C64;
+    border-width: 0px 0px 4px 0px;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+    font-size: initial;
+    font-family: Helvetica Neue;
+    font-weight: 900;
+    font-style: normal
+  }
+.challenge-create-person-button > div, .challenge-person-save-name-button div {
+    color: #999;
+    font-size: 10px;
+    font-family: Helvetica Neue;
+    font-weight: initial;
+    font-style: normal;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+.challenge-create-person-button > i , .challenge-person-save-name-button i{
+    font-size: 1em;
+    border-radius: 0px;
+    border: 0px solid transparent;
+    border-width: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    position: static;
+}
+.challenge-create-person-button > .ld , , .challenge-person-save-name-button .ld{
+    font-size: initial;
+}
+
 
 .challenge-persons {
   margin-top: 10px;
@@ -8,17 +55,30 @@
 
 .challenge-person {
   height: 30px;
+  margin-top: 1rem;
   /* display: flex; */
   align-items: center;
 }
 
+.challenge-person-element{
+  margin-top: 0.5rem;
+  background-color: #77CBB9;
+  padding: 10px;
+}
+
 .challenge-person-id {
   width: 20px;
+  color: #fff;
   font-weight: bold;
   margin-right: 10px;
   text-align: right;
 }
 
-.challenge-person-name {}
+.challenge-person-name {
+  border: 0;
+  padding: 13px; 
+  font-size: 1rem;
+  margin-right: 10px;
+}
 
 .challenge-person-save-name-button {}

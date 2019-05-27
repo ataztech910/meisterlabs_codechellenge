@@ -4,6 +4,7 @@ import PersonsContainer from './containers/PersonsContainer';
 
 const App = ()=> (
     <div className="challenge">
+        <h1>Person adding codechallenge</h1>
         <AddPerson />
         <PersonsContainer />
     </div>
